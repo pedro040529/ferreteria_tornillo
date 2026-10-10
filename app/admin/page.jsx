@@ -1,10 +1,15 @@
 import Image from 'next/image';
 import connectDB from '@/config/database';
 import Product from '@/models/Product';
+import getUser from '@/lib/getUser';
+import { redirect } from 'next/navigation';
 
 export const dynamic = 'force-dynamic';
 
 const AdminPage = async () => {
+  const user = await getUser();
+  if (user?.rol !== 'admin') redirect('/');
+
   await connectDB();
   const productos = JSON.parse(
     JSON.stringify(await Product.find().sort({ codigo: 1 }).lean())

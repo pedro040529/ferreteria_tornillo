@@ -1,0 +1,14 @@
+[
+  {
+    "nombre": "Administrador",
+    "email": "admin@eltornillo.com",
+    "password": "Admin2026!",
+    "rol": "admin"
+  },
+  {
+    "nombre": "Cliente Demo",
+    "email": "cliente@eltornillo.com",
+    "password": "Cliente2026!",
+    "rol": "cliente"
+  }
+]

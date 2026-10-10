@@ -3,24 +3,17 @@ import Image from 'next/image';
 import logo from '@/app/images/logo-white.png';
 import profileDefault from '@/app/images/profile.png';
 import Link from 'next/link';
-import { usePathname, useRouter } from 'next/navigation';
-import { useEffect, useState } from 'react';
-import { FaGoogle } from 'react-icons/fa';
+import { usePathname } from 'next/navigation';
+import { useState } from 'react';
+import { logout } from '@/app/actions/auth';
 
-const Navbar = () => {
+const Navbar = ({ user }: { user: { nombre: string; rol: string } | null }) => {
     const pathname = usePathname();
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [isProfileMenuOpen, setIsProfileMenuOpen] = useState(false);
 
-    const [isloggedIn, setIsLoggedIn] = useState(false);
-    const [isAdmin, setIsAdmin] = useState(false);
-
-    const router = useRouter();
-    useEffect(() => {
-        if (pathname.startsWith('/admin') && !(isloggedIn && isAdmin)) {
-            router.replace('/');
-        }
-    }, [pathname, isloggedIn, isAdmin, router]);
+    const isloggedIn = !!user;
+    const isAdmin = user?.rol === 'admin';
 
     return ( 
         <nav className='bg-blue-900 border-b border-blue-700'>
@@ -100,10 +93,12 @@ const Navbar = () => {
                     !isloggedIn && (
                   <div className='hidden md:block md:ml-6'>
                     <div className='flex items-center'>
-                      <button className='flex items-center text-white bg-orange-500 hover:bg-orange-600 hover:text-white rounded-md px-3 py-2'>
-                        <FaGoogle className='text-white m-2'></FaGoogle>
+                      <Link
+                        href='/login'
+                        className='flex items-center text-white bg-orange-500 hover:bg-orange-600 hover:text-white rounded-md px-3 py-2'
+                      >
                         <span>Ingresar o registrarse</span>
-                      </button>
+                      </Link>
                     </div>
                   </div>
                     )
@@ -147,16 +142,19 @@ const Navbar = () => {
                         tabIndex={-1}
                       >
                         <p className='px-4 py-2 text-xs text-gray-500'>
-                          {isAdmin ? 'Administrador' : 'Cliente registrado'}
+                          {user?.nombre} · {isAdmin ? 'Administrador' : 'Cliente registrado'}
                         </p>
-                        <button
-                          className='block px-4 py-2 text-sm text-gray-700'
-                          role='menuitem'
-                          tabIndex={-1}
-                          id='user-menu-item-2'
-                        >
-                          Cerrar sesión
-                        </button>
+                        <form action={logout}>
+                          <button
+                            type='submit'
+                            className='block w-full px-4 py-2 text-left text-sm text-gray-700 hover:bg-gray-100'
+                            role='menuitem'
+                            tabIndex={-1}
+                            id='user-menu-item-2'
+                          >
+                            Cerrar sesión
+                          </button>
+                        </form>
                       </div>
                       )}
 
@@ -197,10 +195,12 @@ const Navbar = () => {
                     )}
                   {
                     !isloggedIn && (
-                  <button className='flex items-center text-white bg-orange-500 hover:bg-orange-600 hover:text-white rounded-md px-3 py-2 my-4'>
-                    <FaGoogle className='text-white mr-2' />
+                  <Link
+                    href='/login'
+                    className='flex items-center text-white bg-orange-500 hover:bg-orange-600 hover:text-white rounded-md px-3 py-2 my-4'
+                  >
                     <span>Ingresar o registrarse</span>
-                  </button>
+                  </Link>
                     )
                   }
                 </div>
