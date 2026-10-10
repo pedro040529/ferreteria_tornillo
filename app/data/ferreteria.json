@@ -1,0 +1,102 @@
+[
+  {
+    "codigo": "CO-001",
+    "nombre": "Tornillos autorroscantes negros cabeza Phillips",
+    "categoria": "Construcción",
+    "descripcion": "Tornillos de acero negro con cabeza Phillips, para madera y aglomerado. Bolsa de 100 unidades.",
+    "precio": 12.0,
+    "stock": 300,
+    "imagen": "image_1_ejemplo.jpeg",
+    "marca": "Genérico"
+  },
+  {
+    "codigo": "HM-001",
+    "nombre": "Martillo de carpintero con mango de madera",
+    "categoria": "Herramientas manuales",
+    "descripcion": "Martillo de uña curva con cabeza de acero forjado y mango de madera.",
+    "precio": 32.9,
+    "stock": 40,
+    "imagen": "image_2_ejemplo.jpeg",
+    "marca": "Stanley"
+  },
+  {
+    "codigo": "HM-002",
+    "nombre": "Maletín de herramientas 110 piezas",
+    "categoria": "Herramientas manuales",
+    "descripcion": "Set con dados, puntas, destornilladores, alicate, martillo, llave ajustable y flexómetro.",
+    "precio": 119.0,
+    "stock": 15,
+    "imagen": "image_3_ejemplo.jpeg",
+    "marca": "Pretul"
+  },
+  {
+    "codigo": "EL-001",
+    "nombre": "Cerradura inteligente Wi-Fi con huella",
+    "categoria": "Electricidad",
+    "descripcion": "Cerradura digital de acero inoxidable con teclado, huella y tarjeta. No requiere hub.",
+    "precio": 459.0,
+    "stock": 6,
+    "imagen": "image_4_ejemplo.webp",
+    "marca": "Nexxt"
+  },
+  {
+    "codigo": "CO-002",
+    "nombre": "Cerradura de embutir de doble cilindro",
+    "categoria": "Construcción",
+    "descripcion": "Cerradura de sobreponer con doble cilindro, acabado dorado y llaves de seguridad.",
+    "precio": 89.0,
+    "stock": 18,
+    "imagen": "image_5_ejemplo.webp",
+    "marca": "Forte"
+  },
+  {
+    "codigo": "CO-003",
+    "nombre": "Alambre recocido negro rollo 100 kg",
+    "categoria": "Construcción",
+    "descripcion": "Alambre recocido para amarres de fierro y encofrados, rollo de 100 kg.",
+    "precio": 420.0,
+    "stock": 5,
+    "imagen": "image_6_ejemplo.webp",
+    "marca": "Prodac"
+  },
+  {
+    "codigo": "CO-004",
+    "nombre": "Clavo de acero 4\" (10 cm)",
+    "categoria": "Construcción",
+    "descripcion": "Clavo de acero para carpintería y construcción, de 10 cm. Precio por kilo.",
+    "precio": 6.5,
+    "stock": 500,
+    "imagen": "image_7_ejemplo.webp",
+    "marca": "Genérico"
+  },
+  {
+    "codigo": "HE-001",
+    "nombre": "Martillo demoledor 1700 W",
+    "categoria": "Herramientas eléctricas",
+    "descripcion": "Martillo demoledor de alto rendimiento para concreto y mampostería.",
+    "precio": 3890.0,
+    "stock": 0,
+    "imagen": "image_8_ejemplo.webp",
+    "marca": "Bosch"
+  },
+  {
+    "codigo": "HM-003",
+    "nombre": "Juego de puntas de precisión x28",
+    "categoria": "Herramientas manuales",
+    "descripcion": "Set de 28 puntas intercambiables con mango y estuche, ideal para electrónica y joyería.",
+    "precio": 39.9,
+    "stock": 35,
+    "imagen": "image_9_ejemplo.webp",
+    "marca": "Truper"
+  },
+  {
+    "codigo": "HM-004",
+    "nombre": "Destornillador de trinquete angular",
+    "categoria": "Herramientas manuales",
+    "descripcion": "Destornillador con cabeza en ángulo, mango ergonómico y trinquete reversible.",
+    "precio": 24.5,
+    "stock": 50,
+    "imagen": "image_10_ejemplo.webp",
+    "marca": "Genérico"
+  }
+]
