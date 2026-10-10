@@ -13,8 +13,8 @@ const LoginPage = async ({ searchParams }) => {
 
         <input
           name='email'
-          type='email'
-          placeholder='Correo'
+          type='text'
+          placeholder='Correo o usuario'
           required
           className='w-full rounded-lg border border-gray-300 px-3 py-2'
         />

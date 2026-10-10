@@ -9,6 +9,13 @@ export async function login(formData) {
   const email = formData.get('email').toLowerCase().trim();
   const password = formData.get('password');
 
+  // Administrador: usuario y contraseña definidos en el .env
+  if (email === process.env.USUARIO_ADMIN && password === process.env.PASSWORD_ADMIN) {
+    const cookieStore = await cookies();
+    cookieStore.set('userId', 'admin', { httpOnly: true, path: '/' });
+    redirect('/admin');
+  }
+
   const user = await User.findOne({ email });
   if (!user || user.password !== password) {
     redirect('/login?error=Correo o contraseña incorrectos');
