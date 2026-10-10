@@ -12,8 +12,8 @@ const Navbar = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [isProfileMenuOpen, setIsProfileMenuOpen] = useState(false);
 
-    const [isloggedIn, setIsLoggedIn] = useState(true);
-    const [isAdmin, setIsAdmin] = useState(true);
+    const [isloggedIn, setIsLoggedIn] = useState(false);
+    const [isAdmin, setIsAdmin] = useState(false);
 
     const router = useRouter();
     useEffect(() => {
